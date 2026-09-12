@@ -1,4 +1,4 @@
-import webbrowser
+import os
 from flask import Flask, render_template_string, request
 
 app = Flask(__name__)
@@ -131,7 +131,6 @@ HTML_CODE = """
 <body>
     <div class="card">
         <div class="header-top">
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo">
             <h2>Ficha de Identificación</h2>
         </div>
         
@@ -204,5 +203,5 @@ def home():
     return render_template_string(HTML_CODE, mensaje=mensaje)
 
 if __name__ == '__main__':
-    webbrowser.open("http://127.0.0.1:5000")
-    app.run(port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
