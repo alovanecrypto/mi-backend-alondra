@@ -153,5 +153,5 @@ def home():
     return render_template_string(HTML, promedio=promedio, nombre_completo=nombre_completo)
 
 if __name__ == '__main__':
-    port = int(os.enviaron.get("PORT", 10000))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
