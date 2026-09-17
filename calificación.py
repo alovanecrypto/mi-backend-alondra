@@ -75,13 +75,6 @@ HTML = """
 <body>
 <div class="card">
     <h1>Calificaciones 1er Parcial</h1>
-    
-    <div class="presentacion">
-        <strong>Pantalla de Presentación</strong><br>
-        Alumno: {{ nombre_completo }}<br>
-        Fecha: 14-Sep-26<br>
-        Ejercicio de Python / Flask
-    </div>
 
     <form method="POST">
         <label>Nombre completo del alumno:</label>
