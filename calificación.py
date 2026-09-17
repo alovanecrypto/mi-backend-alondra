@@ -1,4 +1,4 @@
-import webbrowser
+import os
 from flask import Flask, render_template_string, request
 
 app = Flask(__name__)
@@ -153,5 +153,5 @@ def home():
     return render_template_string(HTML, promedio=promedio, nombre_completo=nombre_completo)
 
 if __name__ == '__main__':
-    webbrowser.open("http://127.0.0.1:5000")
-    app.run(port=5000, debug=False)
+    port = int(os.enviaron.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
